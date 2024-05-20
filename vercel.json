@@ -1,12 +1,15 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "myapi.py", "use": "@vercel/python" }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "/myapi.py" }
-    ],
-    "env": {
-      "APP_MODULE": "myapi:app"
+  "version": 2,
+  "builds": [
+    {
+      "src": "myapi.py",
+      "use": "@vercel/python"
     }
-  }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "myapi.py"
+    }
+  ]
+}
