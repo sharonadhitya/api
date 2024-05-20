@@ -13,7 +13,7 @@ async def index():
     return {"message": "Welcome to the Student API!"}
 
 @app.get("/students/{student_id}")
-def get_student(student_id: Optional[int] = None):
+async def get_student(student_id: Optional[int] = None):
     return students[student_id]
 
 if __name__ == "__main__":
